@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  .heading {
+  font-size: 25px;
+  margin-left: 20px;
+  margin-top: 40px;
+  line-height: 10px;
+  color: rgb(0, 0, 215);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.loader {
+  width: 15%;
+  height: 4px;
+  display: inline-block;
+  position: relative;
+  margin-left: 20px;
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  background: rgba(255, 255, 255, 0);
+  overflow:hidden;
+}
+
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  width: 0;
+  height: 4px;
+  background: #b10000;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  animation: animFw 3s linear infinite;
+}
+
+@keyframes animFw {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.loader_two {
+  width: 15%;
+  height: 4px;
+  display:block;
+  margin-left: 20px;
+  margin-top: 20px;
+  position: relative;
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  background: rgba(9, 0, 104, 0.15);
+  overflow: hidden;
+}
+.loader_two::after {
+  content: '';
+  width: 96px;
+  height: 4px;
+  background: #004585;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  animation: hitZak 1s linear infinite alternate;
+}
+
+@keyframes hitZak {
+  0% {
+    left: 0;
+    transform: translateX(-1%);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(-99%);
+  }
+}
+
+.loader_tree {
+  width: 15%;
+  height: 4px;
+  margin-top: 25px;
+  display: inline-block;
+  position: relative;
+  margin-left: 20px;
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  background: rgba(255, 255, 255, 0);
+  overflow:hidden;
+}
+
+.loader_tree::after {
+  content: '';  
+  box-sizing: border-box;
+  width: 0;
+  height: 4px;
+  background: #017c37;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  animation: animFw 3s linear infinite;
+  animation-direction:reverse;
+}
+
+@keyframes animFw {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}  
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">Мои навыки</h1>
+    <span class="loader"></span>
+    <span class="loader_two"></span>
+    <span class="loader_tree"></span> 
+</body>
+</html>
