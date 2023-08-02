@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    flex-direction: column;
+    width: 1920px;
+    padding: 111px 240px 582px 240px;
+    align-items: center;
+}
+.box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 45px;
+    max-width: 1440px; 
+}
+.bbox {
+width: 450px;
+height: 903px;
+border-radius: 20px;
+background-color: var(--pink, #F4ECE9);
+
+}
+p {
+    color: var(--brown, #4C4244);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+h1 {
+    width: 266px;
+    height: 88px;
+    color: var(--brown, #4C4244);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 32px;
+    font-style: normal; 
+    line-height: normal;  
+    margin: 36px 90px 30px 90px;   
+}
+.bbox::before {
+    content: url("istockphoto-521573881-612x612 1 (1).png");
+    width: 450px;
+    height: 371px;
+    border-radius: 20px;
+}
