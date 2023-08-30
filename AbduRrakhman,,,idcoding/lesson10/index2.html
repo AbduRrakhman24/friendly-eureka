@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ipt">
+    <button id="btn">TEXT</button>
+    <div id="forText"></div>
+    <script>
+        const input = document.querySelector('#ipt');
+        const btn = document.querySelector('#btn');
+        const div = document.querySelector('#forText')
+        btn.addEventListener('click', function(){
+            if(input.value == 0){
+                div.innerText = 'Поле обязательно для заполнения';
+            }
+            if(input.value.length < 3 & input.value.length > 0){
+                div.innerText = 'Поле должно содержать не менее 3 символов';
+            }
+            if(input.value.length >= 3){
+                div.innerText = input.value
+            }
+        })
+    </script>
+</body>
+</html>

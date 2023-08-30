@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp">
+    <button id="btn">Кнопка</button>
+    <div id="text"></div>
+    <script>
+        const input = document.querySelector('#inp');
+        const btn = document.querySelector('#btn');
+        const resDiv = document.querySelector('#text');
+        
+        btn.addEventListener('click', function () {
+            
+            if (input.value === '') {
+                resDiv.innerText = 'Введите число';
+            }
+            if (isNaN(input.value)){
+                resDiv.innerText = 'Введите число'
+            }
+            input.value = input.value ** 2;
+
+        })
+    </script>
+
+</body>
+</html>
