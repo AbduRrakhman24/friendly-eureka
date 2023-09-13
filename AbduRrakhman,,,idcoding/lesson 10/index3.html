@@ -12,8 +12,15 @@
     <div id="text"></div>
     <script>
         $('#btn').on('click', function () {
-           
-            $('#inp').val() **2
+            if ($('#inp').val() === '') {
+                $('#text').text('Введите число');
+                return;
+            }
+            if (isNaN($('#inp').val())){
+                return $('#text').text('Введите число')
+                ;
+            }
+            $('#inp').val($('#inp').val() ** 2)
         })
     </script>
 </body>
